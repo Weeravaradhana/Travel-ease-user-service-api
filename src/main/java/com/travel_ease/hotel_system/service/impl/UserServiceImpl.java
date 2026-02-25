@@ -460,7 +460,7 @@ public class UserServiceImpl implements UserService {
                 .orElseGet(() -> {
                     log.info("SUPER_ADMIN not found in database. Auto-provisioning...");
 
-                    String email = (String) tokenData.get("email");
+                    String email =  (String) tokenData.get("email");
                     String firstName = (String) tokenData.getOrDefault("given_name", "Super");
                     String lastName = (String) tokenData.getOrDefault("family_name", "Admin");
 
