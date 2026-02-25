@@ -44,6 +44,9 @@ public class User {
     @Column(name = "status", nullable = false)
     private UserStatus status;
 
+    @Column(name = "is_active")
+    private boolean isActive;
+
     @Column(name = "is_account_non_expired", nullable = false)
     private Boolean isAccountNonExpired;
 
@@ -55,6 +58,9 @@ public class User {
 
     @Column(name = "is_enabled", nullable = false)
     private Boolean isEnabled;
+
+    @Column(name = "is_email_verified")
+    private boolean isEmailVerified;
 
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
