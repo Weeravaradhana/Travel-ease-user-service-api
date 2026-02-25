@@ -38,6 +38,10 @@ public class UserAvatar {
     @Column(name = "hash", nullable = false)
     private byte[] hash;
 
+    @OneToOne()
+    @JoinColumn(name = "user_id",nullable = false,unique = true)
+    private User user;
+
     @PrePersist
     protected void onCreate() {
         this.createdAt = LocalDateTime.now();
