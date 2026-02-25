@@ -31,6 +31,10 @@ public class Otp {
     @Column(name = "attempts")
     private Integer attempts;
 
+    @OneToOne()
+    @JoinColumn(name = "user_id",nullable = false,unique = true)
+    private User user;
+
     @PrePersist
     protected void onCreate() {
         createdAt = LocalDateTime.now();
