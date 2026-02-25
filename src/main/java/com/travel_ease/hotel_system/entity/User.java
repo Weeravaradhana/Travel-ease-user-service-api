@@ -65,6 +65,8 @@ public class User {
     @OneToOne(mappedBy = "user")
     private Otp otp;
 
+    @OneToOne(mappedBy = "user")
+    private UserAvatar userAvatar;
 
     @PrePersist
     protected void onCreate() {
